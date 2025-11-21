@@ -2,6 +2,7 @@ import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
+import { Layout } from './layout'
 
 export default defineConfig({
   name: 'default',
@@ -18,4 +19,10 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
+ studio: {
+      components: {
+        layout: Layout,
+      },
+    },
+
 })
